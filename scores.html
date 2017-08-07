@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Marks</title>
+<title>Register|Marks</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="favicon.png" type="image/png">
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 	<div class="container-fluid">
 
-		<div class="row">
+		<div class="row-fluid">
 			<div class="size col-xs-7 col-xs-offset-1">
 
 				<div class="buttons">
@@ -39,8 +39,8 @@
 									</form>
 								</div>
 								<div class="modal-footer">
-									<button class="btn btn-default" type="button"
-										data-dismiss="modal" form="addMark" formaction="######"
+									<button class="btn btn-default" type="submit" value="Submit"
+										data-dismiss="modal" form="addMark" formaction="/university/marks"
 										formmethod="post">Add</button>
 									<button class="btn btn-default" type="button"
 										data-dismiss="modal">Close</button>
@@ -48,8 +48,6 @@
 							</div>
 						</div>
 					</div>
-
-
 					<button data-toggle="modal" data-target="#myModalUpDate"
 						type="button" class="btn btn-primary">Update mark</button>
 					<div id="myModalUpDate" class="modal fade">
@@ -156,9 +154,42 @@
 			</div>
 
 
-			<div class="col-xs-3 col-xs-offset-1">
-				<div>
+			<div class="col-xs-3 col-xs-offset-1 col-md-3 hidden-xs hidden-sm">
+				<div class="search">
+					<h3>
+						<img alt="" src="logMarker.png"> Search
+					</h3>
+					<form class="form-horizontal">
+						<fieldset>
+							<p>
+								<label for="selectRegister" class="control-label">select
+									register</label> <select id="selectRegister" class="form-control">
+									<option>...</option>
+									<option>students</option>
+									<option>subjects</option>
+									<option>marks</option>
+									<option>progress</option>
+								</select>
+							</p>
+							<p>
+								<label for="inputId" class="control-label">id</label> <input
+									id="inputId" placeholder="Input Id" class="form-control"
+									type="number">
+							</p>
+							<p>
+								<label for="inputName">Name</label> <input id="inputName"
+									placeholder="Input name" class="form-control" type="text"
+									pattern="^[a-zA-Z-]+$">
+							</p>
 
+							<div class="col-sm-10 col-sm-offset-2">
+								<button type="submit" class="btn btn-default">search</button>
+							</div>
+						</fieldset>
+					</form>
+
+				</div>
+				<div class="navigator">
 					<h3>
 						<img alt="" src="logMarker.png"> Navigation
 					</h3>
